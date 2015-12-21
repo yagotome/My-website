@@ -3,9 +3,16 @@ section {
 	background: no-repeat center center fixed; 
 	background-size: cover;
 }
+
 #home, #portfolio {			
 	background-image: url("img/bg-home.png");
 }
+
 #about, #contact {
 	background-image: url("img/bg-about.png");
+}
+
+.section-title {
+	padding-top: 100px;
+	text-align: center;
 }

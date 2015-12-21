@@ -8,7 +8,26 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<script type="text/javascript" src="js/script.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/style.css">	
+	<style type="text/css">
+		section {
+			height: 1000px;			
+			background: no-repeat center center fixed; 
+			background-size: cover;
+		}
+
+		#home, #portfolio {			
+			background-image: url("img/bg-home.png");
+		}
+
+		#about, #contact {
+			background-image: url("img/bg-about.png");
+		}
+
+		.section-title {
+			padding-top: 100px;
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -36,7 +55,38 @@
 
 	<a name="home"></a>
 	<section id="home">
+		<div class="section-title">
+			<h1 class="text-primary">Yago Tomé</h1>
+		</div>
+		<div class-"row">
+			<div class="col-xs-12">
+				<ul class="list-inline intro-social-buttons">
+					<li>
+						<a  href="https://www.facebook.com/yg.tome" target="_blank">
+							<button class="btn btn-default">facebook</button>
+						</a>
+					</li>
 
+					<li>
+						<a href="http://www.freecodecamp.com/yagotome2" target="_blank">
+							<button class="btn btn-default">freecode</button>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://www.linkedin.com/profile/view?id=AAIAABoZUb8B6TAHmShqf0fojjldzKXxJ3_eGBI&trk=nav_responsive_tab_profile" target="_blank">
+							<button class="btn btn-default">linkedin</button>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://bitbucket.org/yagotome/" target="_blank">
+							<button class="btn btn-default">bitbucket</button>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</section>
 
 	<a name="about"></a>
