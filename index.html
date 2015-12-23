@@ -3,44 +3,297 @@
 <head>
 	<title>Yago Tomé</title>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('a[href^="#"]').on('click',function (e) {
+			    e.preventDefault();
+
+			    var target = this.hash;
+			    var $target = $(target);
+
+			    $('html, body').stop().animate({
+			        'scrollTop': $target.offset().top
+			    }, 900, 'swing', function () {
+			        window.location.hash = target;
+			    });
+
+				$('html, body').stop().animate({
+				     'scrollTop': $target.offset().top
+				}, 900, 'swing');
+				});
+		});
+	</script>
 	<style type="text/css">
+		body {			
+			font-family: monospace;
+			color: #FFF;
+		}
+
 		section {
-			height: 1000px;			
+			height: 900px;			
 			background: no-repeat center center fixed; 
 			background-size: cover;
 		}
 
-		#home,
-		#portfolio {
-		  	background-image: url("https://pixabay.com/static/uploads/photo/2014/09/24/16/28/bricks-459299_960_720.jpg");
-			padding-top: 20%;
+		p {
+			font-size: 18px;
+			text-align: justify;
+			text-indent: 50px;
 		}
 
-		#about,
-		#contact {
-			background-image: url("https://pixabay.com/static/uploads/photo/2013/02/21/19/12/background-84678_960_720.jpg");
+		h1 {
+			font-family: 'Lobster', cursive;
+			text-shadow: 2px 1px 2px #000;			
+		}
+
+		hr {
+			display: block;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+			margin-left: 5%;
+			margin-right: 5%;
+			border-style: inset;
+			border-width: 2px;
+    		box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+		}
+
+		.foreground {			
+  			background: rgba(255,255,255, 0.2);
+  			height: 100%;
 		}
 
 		.section-title {
-			font-family: Lobster;
-			color: #FFF;
-			font-size: 70px;
+			font-family: 'Lobster', cursive;
+			text-shadow: 2px 1px 2px #000;
+			font-size: 5em;
+			color: rgba(255, 255, 255, 0.85);
 		}
 
 		.row-centered {
 		    text-align:center;
 		}
 
+		.navbar-default {			
+			background: rgba(0, 0, 0, 0.5);
+			border-bottom: 0px;
+		}
+
+
+		.btn-navbar {			
+			background: transparent;
+			color: #FFF !important;			
+			font-size: 16px;
+		}
+
+		.btn-navbar:hover {			
+			background: rgba(255, 255, 255, 0.4) !important;
+		}
+
+		.btn {
+			background: rgba(255, 255, 255, 0.5);
+			display: inline-block;
+			color: #FFF;
+			border: 2px outset rgba(0, 0, 0, 0.9);
+			text-shadow: 1px 1px 1px rgba(0,0,0, 20);
+			box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+			letter-spacing: 2px;
+			transition: 0.2s;
+			text-align: left;
+			width: 170px;
+		}
+
+		.btn-default.focus, .btn-default:focus {
+		    color: #FFF; 
+		    background-color: rgba(255, 255, 255, 0.5);
+		    border-color: rgba(0, 0, 0, 0.9);
+		}
+
 		.buttons-home {
-			margin-top: 3%;
-			margin-left: 1%;
-			margin-right: 1%;
+			margin-top: 20px;
+			margin-left: 2px;
+			margin-right: 2px;
+
+		}
+
+		.img-circle {
+			border-radius: 50%;
+    		box-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+		}		
+
+		.about-left {
+			width: 50%;
+			max-height: 100%;
+    		overflow: auto;
+		}
+
+		.list {
+			list-style-type: none;
+		}
+
+		.form-control {
+			margin-top: 2%;			
+			margin-bottom: 2%;
+		}
+
+		.text-right {
+			text-align: right;
+		}
+
+		#home {
+		  	background-image: url("https://pixabay.com/static/uploads/photo/2014/09/24/16/28/bricks-459299_960_720.jpg");
+		}
+
+		#home-foreground {			
+  			padding-top: 20%;
+		}
+
+		#img-home {			
+			width: 100px;
+			height: 100px;
+			margin-bottom: -20px;
+		}
+
+		#about {
+			background-image: url("https://pixabay.com/static/uploads/photo/2013/02/21/19/12/background-84678_960_720.jpg");
+		}
+
+		#about-foreground {
+			padding: 5%;
+		}
+
+		#about-img {
+			margin: auto;
+			margin-top: 200px;
+    		box-shadow: 4px 4px 4px rgba(0,0,0,0.6);
+		}
+
+		#about-right {
+			width: 50%;
+			height: 100%;
+			float: right;
+		}
+
+		#portfolio {
+		  	background-image: url("https://pixabay.com/static/uploads/photo/2014/09/24/16/28/bricks-459299_960_720.jpg");
+		}
+
+		#portfolio-foreground {
+			padding: 5%;
+		}
+
+		#portfolio-title {
+			margin-bottom: 50px;
+			font-size: 5em;
+		}
+
+		/*Imported by http://codepen.io/ThiagoFerreir4/full/eNMxEp*/
+		#portfolio .portfolio-item {
+			margin: 0 0 15px;
+			right: 0;
+			border: 1px outset rgba(255, 255, 255, 0.6);
+		}
+
+		#portfolio .portfolio-item:hover {
+			transition: 0.5s;
+			box-shadow: 5px 10px 5px rgba(0,0,0,0.9);
+		}
+
+		#portfolio .portfolio-item .portfolio-link {
+			display: block;
+			position: relative;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+
+		#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+			background: rgba(0, 0, 0, .7);
+		  	position: absolute;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: all ease .5s;
+			-webkit-transition: all ease .5s;
+			-moz-transition: all ease .5s,
+		}
+
+		#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+			opacity: 1;
+		}
+
+		#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+			position: absolute;
+			width: 100%;
+			height: 20px;
+			font-size: 20px;
+			text-align: center;
+			top: 50%;
+			margin-top: -12px;
+			color: #fff;
+		}
+
+		#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+			margin-top: -12px;
+		}
+
+		#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+		#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+			margin: 0;
+		}
+
+		#portfolio .portfolio-item .portfolio-caption {
+			max-width: 400px;
+			margin: 0 auto;
+			background-color: rgba(0,0,0, 0.8);
+			text-align: center;
+			padding: 25px;
+		}
+
+		#portfolio .portfolio-item .portfolio-caption h4 {
+			color: #fff;
+			text-transform: none;
+			margin: 0;
+		}
+
+		#portfolio .portfolio-item .portfolio-caption p {
+			font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-style: italic;
+			font-size: 13px;
+			margin: 0;
+		}
+
+		#portfolio * {
+			z-index: 2;
+		}
+		/*end imported code*/
+
+		#portfolio-items {
+			max-height: 600px;
+			overflow: auto;
+		}
+
+		#contact {
+			background-image: url("https://pixabay.com/static/uploads/photo/2013/02/21/19/12/background-84678_960_720.jpg");
+		}
+
+		#form-send-email {
+			width: 100%;
+			padding: 5%;
+		}
+
+		#send-email {
+
+		}
+
+		#email-body {
+			max-height: 490px;
 		}
 
 	</style>
@@ -55,65 +308,220 @@
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 		      	</button>      	
-		      	<a class="navbar-brand" href="https://www.facebook.com/yg.tome" target="_blank">Yago Tomé</a>
+		      	<a class="navbar-brand btn-navbar" href="#home" target="_blank">Yago Tomé</a>
 		    </div>
 
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      	<ul class="nav navbar-nav navbar-right">
-		            <li><a href="#home">Home</a></li>
-		            <li><a href="#about">About</a></li>
-		            <li><a href="#portfolio">Portfolio</a></li>
-		            <li><a href="#contact">Contact</a></li>
+		            <li><a class="btn-navbar" href="#home">Home</a></li>
+		            <li><a class="btn-navbar" href="#about">About</a></li>
+		            <li><a class="btn-navbar" href="#portfolio">Portfolio</a></li>
+		            <li><a class="btn-navbar" href="#contact">Contact</a></li>
 		      	</ul>
 		    </div>
 	  	</div>
 	</nav>
 
-	<a name="home"></a>
 	<section id="home">
-		<div class="section-title row-centered">
-			<p>Yago Tomé</p>
+		<div id="home-foreground" class="foreground">
+			<div class="section-title row-centered">
+				<ul class="list-inline">
+					<li>
+						<span>Yago Tomé</span>
+					</li>					
+					<li>
+						<img id="img-home" class="img-responsive img-circle" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAMqAAAAJGMzOWIyN2Q4LWQ0OTUtNGViNi05YzViLTVmZTNhYmJjOGM5MQ.jpg">
+					</li>
+				</ul>
+			</div>
+			<hr>
+			<ul class="list-inline row-centered">
+				<li class="buttons-home">
+					<a href="https://www.facebook.com/yg.tome" target="_blank" class="btn btn-default btn-lg">
+						<i class="fa fa-facebook"></i>
+						<span>Facebook</span>
+					</a>
+				</li class="buttons-home">
+				<li class="buttons-home">
+					<a href="https://github.com/yagotome2" target="_blank" class="btn btn-default btn-lg">
+						<i class="fa fa-github"></i>
+						<span>Github</span>
+					</a>
+				</li>
+				<li class="buttons-home">
+					<a href="https://www.linkedin.com/profile/view?id=AAIAABoZUb8B6TAHmShqf0fojjldzKXxJ3_eGBI&trk=nav_responsive_tab_profile" target="_blank" class="btn btn-default btn-lg">
+						<i class="fa fa-linkedin"></i>
+						<span>Linkedin</span>
+					</a>
+				</li class="buttons-home">
+				<li class="buttons-home">
+					<a href="https://bitbucket.org/yagotome/" target="_blank" class="btn btn-default btn-lg">
+						<i class="fa fa-bitbucket"></i>
+						<span>Bitbucket</span>
+					</a>
+				</li>
+			</ul>
 		</div>
-		<ul class="list-inline intro-social-buttons row-centered">
-			<li class="buttons-home">
-				<a href="https://www.facebook.com/yg.tome" target="_blank">
-					<button class="btn btn-default">facebook</button>
-				</a>
-			</li class="buttons-home">
-
-			<li class="buttons-home">
-				<a href="http://www.freecodecamp.com/yagotome2" target="_blank">
-					<button class="btn btn-default">freecode</button>
-				</a>
-			</li>
-
-			<li class="buttons-home">
-				<a href="https://www.linkedin.com/profile/view?id=AAIAABoZUb8B6TAHmShqf0fojjldzKXxJ3_eGBI&trk=nav_responsive_tab_profile" target="_blank">
-					<button class="btn btn-default">linkedin</button>
-				</a>
-			</li class="buttons-home">
-
-			<li class="buttons-home">
-				<a href="https://bitbucket.org/yagotome/" target="_blank">
-					<button class="btn btn-default">bitbucket</button>
-				</a>
-			</li>
-		</ul>
 	</section>
 
-	<a name="about"></a>
-	<section id="about">
-
+	<section id="about">		
+		<div id="about-foreground" class="foreground">
+			<div id="about-right">
+				<img id ="about-img" class="img-responsive img-circle" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAMqAAAAJGMzOWIyN2Q4LWQ0OTUtNGViNi05YzViLTVmZTNhYmJjOGM5MQ.jpg">
+			</div>
+			<div class="about-left">
+				<div class="row-centered">
+					<h1>Yago Gomes Tomé de Sousa</h1>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie, magna non luctus sollicitudin, nulla leo tincidunt libero, ut vehicula tortor quam ac nisi. Cras placerat congue quam et sollicitudin. Morbi sed vehicula nunc, vel mollis nunc. Vestibulum dignissim quis nunc id accumsan. Suspendisse nec sapien feugiat augue fringilla vulputate nec et orci. Morbi fringilla metus at tortor vehicula maximus. Praesent dictum vel nulla sit amet pretium. Donec auctor sollicitudin dui quis pharetra. Vestibulum eu ligula id massa consequat porttitor et non erat. Vivamus interdum facilisis tincidunt. Suspendisse auctor ultrices ex, eu varius nisl ultricies non.
+					</p>
+					<p>
+						Phasellus vel libero in nibh laoreet ultrices. Suspendisse potenti. Nunc volutpat euismod ante non scelerisque. Morbi in interdum nibh. Nulla facilisi. Nam rutrum convallis congue. Duis eu diam tellus. Pellentesque massa metus, molestie ac elit non, sodales tempus libero. Vivamus interdum hendrerit velit eu faucibus. Etiam congue quam vel odio tempor, eget lacinia nibh sodales. Ut facilisis, ligula in facilisis sollicitudin, odio tellus vulputate purus, in tincidunt eros lacus ut tellus. Aliquam eleifend nisl a pulvinar luctus.
+					</p>	
+					<!--
+					<p>
+						Phasellus vestibulum, elit a accumsan tristique, neque urna malesuada turpis, ut dictum nisi ligula nec dui. In dictum felis luctus diam mollis, eu scelerisque nibh luctus. Nullam eu justo id eros auctor condimentum at vitae arcu. Proin at felis tempus, condimentum mauris in, bibendum orci. Aenean et eros nisi. Nullam tempor id augue nec consectetur. Proin condimentum, dui quis ultricies pretium, lacus eros iaculis sapien, ut consectetur metus justo tincidunt velit. Aenean pellentesque malesuada risus, et elementum ex pulvinar non. Sed tempor tellus mi. Donec commodo volutpat mi, sit amet ullamcorper arcu aliquam quis. Morbi scelerisque dolor aliquet, venenatis tellus sed, tincidunt sem. Sed sed rhoncus ligula. Praesent in magna lectus.
+					</p>		
+					<p>
+						Donec aliquet, nisi et bibendum ornare, ligula mauris ullamcorper magna, sit amet placerat ex augue vestibulum arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi feugiat, ante sed consectetur pellentesque, est lorem tempor mauris, in faucibus nisi velit ut enim. Proin fringilla turpis accumsan diam faucibus, eget cursus elit auctor. Fusce eu enim sed orci gravida semper. Nulla ac efficitur enim, quis semper odio. Quisque blandit metus ut iaculis volutpat.
+					</p>		
+					<p>
+						Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce volutpat malesuada odio quis luctus. Donec sed eros eget odio placerat viverra eget vel turpis. Proin malesuada dolor diam, ac placerat justo tristique at. Vivamus aliquet urna nec nibh lacinia volutpat. Donec hendrerit vehicula nunc, ac semper risus consequat quis. Donec fringilla, tellus eget laoreet dictum, mi odio ultricies enim, et commodo tortor mauris suscipit ante. Maecenas nec enim sed mi cursus condimentum. Proin nec pretium magna. Donec luctus commodo eros sed tincidunt. Nam sodales neque ac leo scelerisque dapibus. In turpis lectus, consectetur eget vulputate tempor, malesuada eu lorem. Quisque consequat leo at tempor aliquam. Nulla at malesuada dolor, eu accumsan nulla. Sed ultricies at ipsum ut lacinia. Etiam in convallis enim, in dignissim mi.
+					</p>
+					-->
+				</div>
+			</div>
+		</div>		
 	</section>
 
-	<a name="portfolio"></a>
 	<section id="portfolio">
-
+		<div id="portfolio-foreground">
+			<h1 id="portfolio-title" class="row-centered">My portfolio</h1>
+			<div class="row" id="portfolio-items">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://codepen.io/ThiagoFerreir4/full/gpvJOK" target="_blank" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-fire fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="https://scontent-gru2-1.xx.fbcdn.net/hphotos-xpa1/v/t34.0-12/12431208_962024057209619_1331310735_n.jpg?oh=15da7398bb43decbfa1327068d4d7397&oe=567C37F5" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Project 1</h4>
+                        <p id="small-text" class="text-muted">Description</p>
+                    </div>
+                </div>
+              <!-- End of Portfolio img1 -->
+              
+              <!-- Portfolio img2 -->
+                <div class="col-md-4 col-sm-6 portfolio-item portfolio2">
+                    <a href="http://codepen.io/ThiagoFerreir4/full/vOyXre" class="portfolio-link" target="_blank" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-fire fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="https://scontent-gru2-1.xx.fbcdn.net/hphotos-xpa1/v/t34.0-12/12431208_962024057209619_1331310735_n.jpg?oh=15da7398bb43decbfa1327068d4d7397&oe=567C37F5" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Project 2</h4>
+                        <p id="small-text" class="text-muted">Description</p>
+                    </div>
+                </div>
+              <!-- End of Portfolio img2 -->
+              
+              <!-- Portfolio img3 -->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://codepen.io/ThiagoFerreir4/full/QbKWGO" target="_blank" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-fire fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="https://scontent-gru2-1.xx.fbcdn.net/hphotos-xpa1/v/t34.0-12/12431208_962024057209619_1331310735_n.jpg?oh=15da7398bb43decbfa1327068d4d7397&oe=567C37F5" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Project 3</h4>
+                        <p id="small-text" class="text-muted">Description</p>
+                    </div>
+                </div>
+              <!-- End of Portfolio img3 -->
+              
+              <!-- Portfolio img4 -->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://codepen.io/ThiagoFerreir4/full/vOaRQz/" target="_blank" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-fire fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="https://scontent-gru2-1.xx.fbcdn.net/hphotos-xpa1/v/t34.0-12/12431208_962024057209619_1331310735_n.jpg?oh=15da7398bb43decbfa1327068d4d7397&oe=567C37F5" class="img-responsive" alt="">                        
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Project 4</h4>
+                        <p id="small-text" class="text-muted">Description</p>
+                    </div>
+                </div>
+              <!-- End of Portfolio img4 -->
+              
+              <!-- Portfolio img5 -->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://codepen.io/ThiagoFerreir4/full/oXwKJV" target="_blank" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-fire fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="https://scontent-gru2-1.xx.fbcdn.net/hphotos-xpa1/v/t34.0-12/12431208_962024057209619_1331310735_n.jpg?oh=15da7398bb43decbfa1327068d4d7397&oe=567C37F5" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Project 5</h4>
+                        <p id="small-text" class="text-muted">Description</p>
+                    </div>
+                </div>
+              <!-- End of Portfolio img5 -->
+              
+              <!-- Portfolio img6 -->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://codepen.io/ThiagoFerreir4/full/EjwGoX/" target="_blank" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-fire fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="https://scontent-gru2-1.xx.fbcdn.net/hphotos-xpa1/v/t34.0-12/12431208_962024057209619_1331310735_n.jpg?oh=15da7398bb43decbfa1327068d4d7397&oe=567C37F5" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Project 6</h4>
+                        <p id="small-text" class="text-muted">Description</p>
+                    </div>
+                </div>
+              <!-- End of Portfolio img6 -->
+            </div>
+        </div>
 	</section>
 
-	<a name="contact"></a>
-	<section id="contact">
-
+	<section id="contact">		
+		<div class="foreground">
+			<div>
+				<form id="form-send-email" action="/submit-cat-photo">
+					<h1 class="row-centered">Send me an e-mail</h1>
+			        <input type="text" class="form-control" placeholder="Insert your e-mail here" required>
+			        <input type="text" class="form-control" placeholder="Insert the subject here" required>
+			        <textarea id="email-body" class="form-control" rows="12" cols="50" placeholder="Message"></textarea>
+					<div class="text-right">
+				        <button id="send-email" onClick="alert('E-mail successfully sent.\nThank you for the contact!')" class="btn btn-default btn-lg">
+				        	<i class="fa fa-paper-plane"></i>
+				        	<span>Send</span>
+				        </button>
+			        </div>
+			    </form>
+			</div>
+		</div>
 	</section>
+
+	<footer>
+	</footer>
 </body>
 </html>
