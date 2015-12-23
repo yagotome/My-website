@@ -1,18 +1,328 @@
+/*By element*/
+body {			
+	font-family: monospace;
+	color: #FFF;
+}
+
 section {
-	height: 1000px;			
+	height: 900px;			
 	background: no-repeat center center fixed; 
 	background-size: cover;
 }
 
-#home, #portfolio {			
-	background-image: url("img/bg-home.png");
+p {
+	font-size: 18px;
+	text-align: justify;
+	text-indent: 50px;
 }
 
-#about, #contact {
-	background-image: url("img/bg-about.png");
+h1 {
+	font-family: 'Lobster', cursive;
+	text-shadow: 2px 1px 2px #000;			
+}
+
+hr {
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: 5%;
+	margin-right: 5%;
+	border-style: inset;
+	border-width: 2px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+
+footer {
+	background: no-repeat center center fixed; 
+	background-size: cover;
+	background-image: url("https://pixabay.com/static/uploads/photo/2014/09/24/16/28/bricks-459299_960_720.jpg");
+	/*background-image: url("https://pixabay.com/static/uploads/photo/2013/02/21/19/12/background-84678_960_720.jpg");*/
+	height: inherit;
+}
+
+/*By class*/
+.foreground {			
+		background: rgba(255,255,255, 0.25);
+		height: 100%;
 }
 
 .section-title {
-	padding-top: 100px;
+	font-family: 'Lobster', cursive;
+	text-shadow: 2px 1px 2px #000;
+	font-size: 5em;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.row-centered {
+    text-align:center;
+}
+
+.navbar-default {			
+	background: rgba(0, 0, 0, 0.5);
+	border-bottom: 0px;
+}
+
+
+.btn-navbar {			
+	background: transparent;
+	color: #FFF !important;			
+	font-size: 16px;
+}
+
+.btn-navbar:hover {			
+	background: rgba(255, 255, 255, 0.4) !important;
+}
+
+.btn {
+	background: rgba(255, 255, 255, 0.5);
+	display: inline-block;
+	color: #FFF;
+	border: 2px outset rgba(0, 0, 0, 0.9);
+	text-shadow: 1px 1px 1px rgba(0,0,0, 20);
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+	letter-spacing: 2px;
+	transition: 0.2s;
+	text-align: left;
+	width: 170px;
+}
+
+.btn-default.focus, .btn-default:focus {
+    color: #FFF; 
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(0, 0, 0, 0.9);
+}
+
+.buttons-home {
+	margin-top: 20px;
+	margin-left: 2px;
+	margin-right: 2px;
+
+}
+
+.img-circle {
+	border-radius: 50%;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+}		
+
+.list {
+	list-style-type: none;
+}
+
+.form-control {
+	margin-top: 2%;			
+	margin-bottom: 2%;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.buttons-footer {
+	font-size: 14px;
+	padding: 2px;
+	width: 28px;
+	margin-top: -5px;
 	text-align: center;
+	margin-right: -8px;
+}
+
+/*By id*/
+#home {
+  	background-image: url("https://pixabay.com/static/uploads/photo/2014/09/24/16/28/bricks-459299_960_720.jpg");
+  	/*background-image: url("https://pixabay.com/static/uploads/photo/2013/02/21/19/12/background-84678_960_720.jpg");*/
+}
+
+#home-foreground {			
+		padding-top: 20%;
+}
+
+#img-home {			
+	width: 100px;
+	height: 100px;
+	margin-bottom: -20px;
+}
+
+#about {
+	/*background-image: url("https://pixabay.com/static/uploads/photo/2014/09/24/16/28/bricks-459299_960_720.jpg");*/
+	background-image: url("https://pixabay.com/static/uploads/photo/2013/02/21/19/12/background-84678_960_720.jpg");
+}
+
+#about-foreground {
+	padding: 5%;
+}
+
+#about-img {
+	margin: auto;
+	margin-top: 20px;
+	box-shadow: 4px 4px 4px rgba(0,0,0,0.6);
+}
+
+#about-left {
+	width: 50%;
+	max-height: 100%;
+	overflow: auto;
+}
+
+#about-right {
+	width: 50%;
+	height: 100%;
+	float: right;
+}
+
+@media screen and (max-width: 768px) {
+	#about-left {
+		width: 100%;
+		max-height: 100%;
+		overflow: auto;
+	}
+	#about-right {
+		display: none;
+	}
+}
+
+#portfolio {
+  	background-image: url("https://pixabay.com/static/uploads/photo/2014/09/24/16/28/bricks-459299_960_720.jpg");
+  	/*background-image: url("https://pixabay.com/static/uploads/photo/2013/02/21/19/12/background-84678_960_720.jpg");*/
+}
+
+#portfolio-foreground {
+	padding: 5%;
+}
+
+#portfolio-title {
+	margin-bottom: 50px;
+	font-size: 5em;
+}
+
+/*Imported by http://codepen.io/ThiagoFerreir4/full/eNMxEp*/
+#portfolio .portfolio-item {
+	margin: 0 0 15px;
+	right: 0;
+	border: 1px outset rgba(255, 255, 255, 0.6);
+}
+
+#portfolio .portfolio-item:hover {
+	transition: 0.5s;
+	box-shadow: 5px 10px 5px rgba(0,0,0,0.9);
+}
+
+#portfolio .portfolio-item .portfolio-link {
+	display: block;
+	position: relative;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+	background: rgba(0, 0, 0, .7);
+  	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: all ease .5s;
+	-webkit-transition: all ease .5s;
+	-moz-transition: all ease .5s,
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+	opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	font-size: 20px;
+	text-align: center;
+	top: 50%;
+	margin-top: -12px;
+	color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+	margin-top: -12px;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+	margin: 0;
+}
+
+#portfolio .portfolio-item .portfolio-caption {
+	max-width: 400px;
+	margin: 0 auto;
+	background-color: rgba(0,0,0, 0.8);
+	text-align: center;
+	padding: 25px;
+}
+
+#portfolio .portfolio-item .portfolio-caption h4 {
+	color: #fff;
+	text-transform: none;
+	margin: 0;
+}
+
+#portfolio .portfolio-item .portfolio-caption p {
+	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: italic;
+	font-size: 13px;
+	margin: 0;
+}
+
+#portfolio * {
+	z-index: 2;
+}
+/*end imported code*/
+
+#portfolio-items {
+	max-height: 600px;
+	overflow: auto;
+}
+
+#contact {
+	background-image: url("https://pixabay.com/static/uploads/photo/2013/02/21/19/12/background-84678_960_720.jpg");
+	/*background-image: url("https://pixabay.com/static/uploads/photo/2014/09/24/16/28/bricks-459299_960_720.jpg");*/
+}
+
+#form-send-email {
+	width: 100%;
+	padding: 5%;
+}
+
+#send-email {
+
+}
+
+#email-body {
+	max-height: 490px;
+	max-width: 100%;
+}
+
+#input-email {
+	width: 30%;
+}
+
+#footer-foreground {
+	padding: 3px;
+	padding-left: 2%;
+	padding-right: 2%;
+	height: inherit;
+}
+
+#copyright {
+	font-family: monospace;
+	font-size: 12px;
+	font-style: italic;
+}
+
+#list-buttons-footer {
+	margin: 0 !important;
+	height: auto;
+}
+
+.footer-contacts {
+	font-family: monospace;
+	font-size: 16px;
+	font-style: italic;
+	margin-left: 12px;
 }
